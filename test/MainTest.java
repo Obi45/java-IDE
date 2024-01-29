@@ -15,7 +15,7 @@ class MainTest {
     public void testMainSubtract(){
         Main main = new Main();
 
-        int actual = main.subtract(10, 5);
+        int actual = gmain.subtract(10, 5);
         assertEquals(5, actual);
     }
 

@@ -4,6 +4,8 @@ public class MenstruationCycle {
     private String name;
     private int age;
 
+    private LocalDate localDate;
+
     public MenstruationCycle(String name, int age) {
         this.name = name;
         this.age = age;
@@ -31,14 +33,15 @@ public class MenstruationCycle {
         }
     }
 
-    public String checkCycleLength() {
+    public String checkCycleLength(  ) {
 
         String cycleLength;
         cycleLength = date2 - date1;
         return cycleLength;
     }
     public String checkOvulationCycle(){
-        return checkOvulationCycle = cycleLength / 2 ;
+        String ovulationCycle = cycleLength / 2 ;
+        return ovulationCycle ;
     }
     public int  checkFertileWindow(){
           return checkFertileWindow = cycleLength + 4 ;
