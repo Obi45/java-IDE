@@ -1,5 +1,5 @@
 public class Arrays {
-    public static void main(String[] args) {
-        int[] array = {};
+    public static int scores(int[] grade) {
+
     }
 }
