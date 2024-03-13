@@ -1,8 +1,10 @@
 
+import java.time.LocalDate;
 import java.util.Scanner;
 
 
 public class MenstruationCycle {
+    LocalDate presentDate = LocalDate.now();
 
     public void getUserName() {
         System.out.println("enter user name:");
@@ -40,13 +42,25 @@ public class MenstruationCycle {
         int daysOfMonth = 31;
         boolean valid = true;
 
-        while(valid){
+        while(true){
             if (lastDayOfFlow < 1){
                 System.out.println("Enter a valid number");
-                //else if (lastDayOfFlow > daysOfMonth){
+
                     System.out.println("Enter a valid date:");
 
                     System.out.println("what month did you experience your last flow");
+                    int lastFlowMonth = input.nextInt();
+
+                System.out.println("enter year of flow:");
+                int yearOfFlow = input.nextInt();
+
+                System.out.println("what is the average length of your menstrual cycle:");
+                int menstrualCycleLength = input.nextInt();
+
+                LocalDate dateOfMenstrualFlow = LocalDate.of(yearOfFlow, lastFlowMonth,lastDayOfFlow);
+                LocalDate nextMenstrualFlow = dateOfMenstrualFlow.plusDays(menstrualCycleLength);
+                System.out.println("your next menstrual will be:" + nextMenstrualFlow);
+
                 }
             }
         }

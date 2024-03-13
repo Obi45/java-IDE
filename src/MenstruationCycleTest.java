@@ -17,6 +17,7 @@ public class MenstruationCycleTest {
             System.out.println("sorry you have attain your menopause stage");
         }
         MenstruationCycle menstruationCycle = new MenstruationCycle();
+        menstruationCycle.calculateMenstrualCycle();
 
 
 

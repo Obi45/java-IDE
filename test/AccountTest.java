@@ -31,6 +31,20 @@ public class AccountTest {
     public void testToWithdrawNegativeAmountAndBalanceRemainsUnchanged(){
         assertEquals(0, account.getBalance());
         account.withDraw(-20_000);
+        assertEquals(0, account.getBalance());
 
+    }
+    @Test
+    public void testThatWhenMyBalanceIs1200AndiWithdraw1000MyBalanceChanges(){
+        account.deposit(1200);
+        assertEquals(1200, account.getBalance());
+        account.withDraw(1000);
+        assertEquals(200, account.getBalance());
+    }
+    @Test
+    public void testThatWhenMyBalanceIs200AndIWithdraw50_000MyBalanceRemainsUnchange(){
+        account.deposit(200);
+        account.withDraw(50_000);
+        assertEquals(200, account.getBalance());
     }
 }
