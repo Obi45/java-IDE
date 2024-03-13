@@ -10,6 +10,9 @@ public class PyramidOfGiza {
         double weightOfStone = 2268;
         int years = 25;
 
+
+
+
         int oneYear = 2300000 / 25;
         System.out.println("the number of stone to be use in one year:" + oneYear);
 
